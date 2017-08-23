@@ -1,10 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: './client/index.js',
+  node: { fs: 'empty' },
   output: {
     filename: 'js/[name].[chunkhash].js',
     path: path.resolve(__dirname, 'public')
@@ -26,19 +27,21 @@ module.exports = {
     new ExtractTextPlugin({
       filename: 'styles/[name].[chunkhash].css',
       allChunks: true
-    }),
+    })
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
         include: [path.resolve(__dirname, 'client')],
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            presets: ['es2015', 'stage-0', 'react']
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015', 'stage-0', 'react']
+            }
           }
-        }]
+        ]
       },
       {
         test: /\.less$/,
@@ -49,4 +52,4 @@ module.exports = {
       }
     ]
   }
-};
+}

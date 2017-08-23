@@ -37,6 +37,7 @@
     "express": "4.14.1",
     "node-soundcloud": "0.0.6",
     "react-loading": "^0.1.4",
-    "react-soundplayer": "^0.3.6"
+    "react-soundplayer": "^0.3.6",
+    "soundrain": "0.0.2"
   }
 }
