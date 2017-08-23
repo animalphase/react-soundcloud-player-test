@@ -1,6 +1,6 @@
-# Seed project for React 15.x using webpack 2.2.1 and express 4.14.1
+# test soundcloud player component
 
-Use this seed application to quickly bootstrap your prototypes.
+forked from https://github.com/raoulus/react-webpack-template
 
 This project includes:
 - React 15.4.2
@@ -12,6 +12,9 @@ This project includes:
 ## Getting started
 
 ```bash
+# install
+npm install
+
 # build client
 npm run build
 
@@ -23,4 +26,3 @@ npm run dev
 ```
 
 ## Todos
-- Setup tests with mocha and enzyme
