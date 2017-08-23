@@ -1,6 +1,8 @@
 # test soundcloud player component
 
-forked from https://github.com/raoulus/react-webpack-template
+⭐️ live demo: http://amoon-react-soundcloud.surge.sh/
+
+forked from [this webpack template](https://github.com/raoulus/react-webpack-template react/web)
 
 This project includes:
 - React 15.4.2

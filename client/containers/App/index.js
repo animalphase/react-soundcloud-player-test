@@ -1,5 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-import Headline from 'components/Headline'
+import Player from '../../components/player'
+import SC from 'node-soundcloud'
+import ReactLoading from 'react-loading'
+
 import css from './styles.less'
 
 export default class App extends Component {
@@ -10,11 +13,12 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
-        <Headline text="react soundcloud component" />
+        <h1>react soundcloud player test</h1>
         <form>
           <label htmlFor="soundcloud-url-input">soundcloud song url</label>
           <input type="text" id="soundcloud-url-input" name="soundcloud-url" />
           <input type="submit" value="Play Song" />
+          {/*<ReactLoading type="spin" color="#444" delay="1" />*/}
         </form>
       </div>
     )
