@@ -39,9 +39,7 @@ export default class PlayerBlock extends React.Component {
             className={'play-button'}
             playing={true}
             seeking={false}
-            seekingIcon={this.PlayIcon()
-            /*optional icon that will be showed when track is seeking new position to play*/
-            }
+            seekingIcon={this.PlayIcon()}
             onTogglePlay={Function}
           />
         </SoundPlayerContainer>

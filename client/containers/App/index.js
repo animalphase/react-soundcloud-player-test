@@ -23,9 +23,19 @@ export default class App extends Component {
             placeholder="Enter spotify URL…"
           />
           <input type="submit" value="Find Song" />
-          <hr />
-          <PlayerBlock />
         </form>
+        <hr />
+        <main>
+          <div className="block-wrapper one-one">
+            <PlayerBlock />
+          </div>
+          <div className="block-wrapper one-two">
+            <PlayerBlock />
+          </div>
+          <div className="block-wrapper three-two">
+            <PlayerBlock />
+          </div>
+        </main>
       </div>
     )
   }

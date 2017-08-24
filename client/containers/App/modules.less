@@ -1,0 +1,45 @@
+.block-wrapper {
+  border: 1px solid #000;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+}
+.block-wrapper.one-one {
+  width: 115px;
+  height: 115px;
+}
+.block-wrapper.one-two {
+  width: 115px;
+  height: 230px;
+}
+.block-wrapper.three-two {
+  width: 345px;
+  height: 230px;
+}
+
+.player-block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .play-button {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    svg {
+      display: block;
+      width: 60px;
+      height: 60px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        background: red;
+      }
+    }
+  }
+}
