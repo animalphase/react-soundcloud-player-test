@@ -1,5 +1,10 @@
 import React, { Component, PropTypes, ReactElement } from 'react'
-import { PlayButton, Progress, Icons } from 'react-soundplayer/components'
+import {
+  PlayButton,
+  Cover,
+  Progress,
+  Icons
+} from 'react-soundplayer/components'
 import { SoundPlayerContainer } from 'react-soundplayer/addons'
 
 const { SoundCloudLogoSVG } = Icons
@@ -35,14 +40,23 @@ export default class PlayerBlock extends React.Component {
           resolveUrl={resolveUrl}
           onReady={this.trackReady}
         >
+          {/*<Cover
+              className={'track-cover'}
+              trackName={String}
+              artistName={String}
+              backgroundUrl={String}
+            />*/}
           <PlayButton
             className={'play-button'}
             playing={true}
             seeking={false}
             seekingIcon={this.PlayIcon()}
-            onTogglePlay={Function}
           />
         </SoundPlayerContainer>
+        <p className="test-info">
+          playing from  <code>{resolveUrl}</code> <br />with clientId{' '}
+          <code>{clientId}</code>
+        </p>
       </div>
     )
   }

@@ -13,7 +13,7 @@ export default class App extends Component {
     return (
       <div className="app">
         <h1>react soundcloud player test</h1>
-        <form>
+        {/*<form>
           <label htmlFor="soundcloud-url-input">soundcloud song url</label>
           <input
             type="search"
@@ -23,18 +23,18 @@ export default class App extends Component {
             placeholder="Enter spotify URL…"
           />
           <input type="submit" value="Find Song" />
-        </form>
+        </form>*/}
         <hr />
         <main>
           <div className="block-wrapper one-one">
             <PlayerBlock />
           </div>
-          <div className="block-wrapper one-two">
+          {/*<div className="block-wrapper one-one">
             <PlayerBlock />
           </div>
           <div className="block-wrapper three-two">
             <PlayerBlock />
-          </div>
+          </div>*/}
         </main>
       </div>
     )
