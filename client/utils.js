@@ -8,19 +8,22 @@ const utils = {
    * @return {varies}              returns null, or the value found at the requested property
    */
   getPropValue: (pathToProp, objectToScan) => {
-    return pathToProp.reduce( (step, otherStep) => (step && step[otherStep]) ? step[otherStep] : null, objectToScan )
+    return pathToProp.reduce(
+      (step, otherStep) => (step && step[otherStep] ? step[otherStep] : null),
+      objectToScan
+    )
   },
   /**
    * check if image exists at url
    * @param  {string} image_url the url of image to test
    * @return {bool}           does the image exist or not
    */
-  imageExists: (image_url) => {
-    var http = new XMLHttpRequest();
-    http.open('HEAD', image_url, false);
-    http.send();
-    return http.status != 404;
+  imageExists: image_url => {
+    var http = new XMLHttpRequest()
+    http.open('HEAD', image_url, false)
+    http.send()
+    return http.status != 404
   }
-};
+}
 
-export default utils;
+export default utils

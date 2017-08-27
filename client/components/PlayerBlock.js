@@ -2,7 +2,6 @@ import React, { Component, PropTypes, ReactElement } from 'react'
 import { SoundPlayerContainer } from 'react-soundplayer/addons'
 import Player from './Player'
 
-
 /**
  * Construct player block module for page
  * @type {[type]}
@@ -20,7 +19,7 @@ export default class PlayerBlock extends React.Component {
 
   render() {
     return (
-      <div className='player-block'>
+      <div className="player-block">
         <SoundPlayerContainer onReady={this.trackReady} {...this.props}>
           <Player />
         </SoundPlayerContainer>
