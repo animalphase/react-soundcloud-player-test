@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-// import Player from '../../components/player'
-import PlayerBlock from '../../components/PlayerBlock.js'
-import ReactLoading from 'react-loading'
-import css from './styles.less'
+import css from '../../styles/main.less'
 
+import PlayerBlock from '../../components/PlayerBlock.js'
 const clientId = 'yFIWGxNutPTNxqnk0d1Na8tYoecnm4DE'
 const resolveUrl = 'https://soundcloud.com/remixluke/1953-remake'
 
@@ -27,17 +25,23 @@ export default class App extends Component {
           />
           <input type="submit" value="Find Song" />
         </form>
+
         <hr />
+
         <main>
+
           <div className="block-wrapper one-two">
             <PlayerBlock clientId={clientId} resolveUrl={resolveUrl} />
           </div>
+
           <div className="block-wrapper one-one">
             <PlayerBlock clientId={clientId} resolveUrl={resolveUrl} />
           </div>
+
           <div className="block-wrapper three-two">
             <PlayerBlock clientId={clientId} resolveUrl={resolveUrl} />
           </div>
+
         </main>
       </div>
     )
