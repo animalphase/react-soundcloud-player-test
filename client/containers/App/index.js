@@ -4,6 +4,9 @@ import PlayerBlock from '../../components/PlayerBlock.js'
 import ReactLoading from 'react-loading'
 import css from './styles.less'
 
+const clientId = 'yFIWGxNutPTNxqnk0d1Na8tYoecnm4DE'
+const resolveUrl = 'https://soundcloud.com/remixluke/1953-remake'
+
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -13,7 +16,7 @@ export default class App extends Component {
     return (
       <div className="app">
         <h1>react soundcloud player test</h1>
-        {/*<form>
+        <form>
           <label htmlFor="soundcloud-url-input">soundcloud song url</label>
           <input
             type="search"
@@ -23,18 +26,18 @@ export default class App extends Component {
             placeholder="Enter spotify URL…"
           />
           <input type="submit" value="Find Song" />
-        </form>*/}
+        </form>
         <hr />
         <main>
-          <div className="block-wrapper one-one">
-            <PlayerBlock />
+          <div className="block-wrapper one-two">
+            <PlayerBlock clientId={clientId} resolveUrl={resolveUrl} />
           </div>
-          {/*<div className="block-wrapper one-one">
-            <PlayerBlock />
+          <div className="block-wrapper one-one">
+            <PlayerBlock clientId={clientId} resolveUrl={resolveUrl} />
           </div>
           <div className="block-wrapper three-two">
-            <PlayerBlock />
-          </div>*/}
+            <PlayerBlock clientId={clientId} resolveUrl={resolveUrl} />
+          </div>
         </main>
       </div>
     )

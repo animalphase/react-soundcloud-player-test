@@ -9,13 +9,35 @@ import { SoundPlayerContainer } from 'react-soundplayer/addons'
 
 const { SoundCloudLogoSVG } = Icons
 
-const clientId = 'yFIWGxNutPTNxqnk0d1Na8tYoecnm4DE'
-const resolveUrl = 'https://soundcloud.com/remixluke/1953-remake'
+/**
+ * contents and controls for player block
+ * @type {String}
+ */
+class Player extends Component {
+  render() {
+    let { track, currentTime } = this.props;
+    return (
+      <div className='player-inner-wrapper'>
+        <PlayButton className='play-button' {...this.props} />
+        {/*<VolumeControl className='flex flex-center mr2' buttonClassName='flex-none h4 button button-transparent button-grow rounded' {...this.props} />*/}
+        <h2 className='h5 nowrap caps flex-auto m0'>{track ? track.title : 'Loading...'}</h2>
+        {/*<Timer className='h6 mr1' duration={track ? track.duration / 1000 : 0} currentTime={currentTime} {...this.props} />*/}
+      </div>
+    );
+  }
+}
 
+/**
+ * Construct player block module for page
+ * @type {[type]}
+ */
 export default class PlayerBlock extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.trackReady = this.trackReady.bind(this)
+    this.state = {
+      currentTrack: {}
+    }
   }
 
   trackReady() {
@@ -33,30 +55,24 @@ export default class PlayerBlock extends React.Component {
 
   //soundCloudAudio={instanceof SoundCloudAudio}
   render() {
+    console.log(this.props);
     return (
-      <div className="player-block">
-        <SoundPlayerContainer
+      <div className='player-block'>
+      <SoundPlayerContainer {...this.props}>
+        <Player />
+      </SoundPlayerContainer>
+        {/*<SoundPlayerContainer
           clientId={clientId}
           resolveUrl={resolveUrl}
           onReady={this.trackReady}
         >
-          {/*<Cover
-              className={'track-cover'}
-              trackName={String}
-              artistName={String}
-              backgroundUrl={String}
-            />*/}
           <PlayButton
             className={'play-button'}
             playing={true}
             seeking={false}
             seekingIcon={this.PlayIcon()}
           />
-        </SoundPlayerContainer>
-        <p className="test-info">
-          playing from  <code>{resolveUrl}</code> <br />with clientId{' '}
-          <code>{clientId}</code>
-        </p>
+        </SoundPlayerContainer>*/}
       </div>
     )
   }
