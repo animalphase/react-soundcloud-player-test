@@ -5,6 +5,7 @@
 forked from [this webpack template](https://github.com/raoulus/react-webpack-template react/web)
 
 This project includes:
+- [react-soundplayer](https://github.com/soundblogs/react-soundplayer)
 - React 15.4.2
 - webpack 2.2.1
 - express 4.14.1
